@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Loja especializada em produtos odontológicos para dentistas e clínicas. Compre escovas, clareadores, materiais e muito mais." />
+  <title>Loja OdontoPro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-flex">
+      <h1>OdontoPro</h1>
+
+      <div class="busca-produto">
+        <label for="campo-busca" class="sr-only">Buscar produtos</label>
+        <input type="text" id="campo-busca" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+      </div>
+
+      <button id="btn-tema" aria-label="Alternar tema escuro/claro" title="Alternar tema escuro/claro">
+        🌙
+      </button>
+
+      <button
+        class="carrinho"
+        id="carrinho-btn"
+        aria-label="Abrir carrinho de compras"
+        title="Abrir carrinho de compras"
+        aria-expanded="false"
+        aria-controls="area-carrinho"
+      >
+        🛒 <span id="contador-carrinho" aria-live="polite" aria-atomic="true">0</span>
+      </button>
+    </div>
+
+    <div
+      id="area-carrinho"
+      class="carrinho-itens"
+      role="region"
+      aria-label="Itens no carrinho"
+      aria-live="polite"
+      aria-atomic="true"
+      hidden
+    >
+      <h2>Itens no Carrinho</h2>
+      <ul id="lista-itens-carrinho" tabindex="0">
+        <!-- Itens adicionados aparecerão aqui -->
+      </ul>
+      <button id="fechar-carrinho" class="btn" type="button" aria-label="Fechar carrinho">
+        Fechar
+      </button>
+    </div>
+
+    <nav aria-label="Menu principal">
+      <ul class="menu">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="section" tabindex="-1">
+      <div class="container">
+        <h2>Bem-vindo à OdontoPro!</h2>
+        <p>Os melhores produtos odontológicos para profissionais e clínicas.</p>
+      </div>
+    </section>
+
+    <section id="produtos" class="section" tabindex="-1">
+      <div class="container">
+        <h2>Nossos Produtos</h2>
+        <div class="produto-grid" id="lista-produtos">
+          <!-- Exemplo de Produto -->
+          <article class="produto" data-nome="Escova Elétrica" data-preco="15.00" tabindex="0">
+            <img src="escova-eletrica.jpg" alt="Escova dental elétrica" loading="lazy" />
+            <h3>Escova Elétrica</h3>
+            <p>R$ 15,00</p>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Escova Elétrica', 15.00)" aria-label="Adicionar Escova Elétrica ao carrinho">Adicionar ao carrinho</button>
+          </article>
+
+          <!-- Demais produtos seguem a mesma estrutura -->
+          <article class="produto" data-nome="Kit Clareador" data-preco="89.00" tabindex="0">
+            <img src="clareador-dental.jpg" alt="Kit clareador dental" loading="lazy" />
+            <h3>Kit Clareador Dental</h3>
+            <p>R$ 89,00</p>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Kit Clareador', 89.00)" aria-label="Adicionar Kit Clareador ao carrinho">Adicionar ao carrinho</button>
+          </article>
+
+          <article class="produto" data-nome="Fio Dental com Sabor" data-preco="8.50" tabindex="0">
+            <img src="fio-dental-com-sabor.jpg" alt="Fio dental com sabor" loading="lazy" />
+            <h3>Fio Dental com Sabor</h3>
+            <p>R$ 8,50</p>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Fio Dental com Sabor', 8.50)" aria-label="Adicionar Fio Dental com Sabor ao carrinho">Adicionar ao carrinho</button>
+          </article>
+
+          <article class="produto" data-nome="Material Odontológico" data-preco="150.00" tabindex="0">
+            <img src="materiais-odontologicos.jpg" alt="Material odontológico" loading="lazy" />
+            <h3>Material Odontológico</h3>
+            <p>R$ 150,00</p>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Material Odontológico', 150.00)" aria-label="Adicionar Material Odontológico ao carrinho">Adicionar ao carrinho</button>
+          </article>
+
+          <article class="produto" data-nome="Papel Carbono - Super Carbon" data-preco="18.50" tabindex="0">
+            <img src="papel-carbon.jpg" alt="Papel carbono Super Carbon" loading="lazy" />
+            <h3>Papel Carbono - Super Carbon</h3>
+            <p>R$ 18,50</p>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Papel Carbono - Super Carbon', 18.50)" aria-label="Adicionar Papel Carbono - Super Carbon ao carrinho">Adicionar ao carrinho</button>
+          </article>
+
+          <article class="produto" data-nome="Afastador Labial C Black" data-preco="24.00" tabindex="0">
+            <img src="afastador-labial.jpeg" alt="Afastador labial em C Black" loading="lazy" />
+            <h3>Afastador Labial C Black</h3>
+            <p>R$ 24,00</p>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Afastador Labial C Black', 24.00)" aria-label="Adicionar Afastador Labial C Black ao carrinho">Adicionar ao carrinho</button>
+          </article>
+
+          <article class="produto" data-nome="Escova Interdental" data-preco="12.00" tabindex="0">
+            <img src="escova-interdental.jpg" alt="Escova interdental" loading="lazy" />
+            <h3>Escova Interdental</h3>
+            <p>R$ 12,00</p>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Escova Interdental', 12.00)" aria-label="Adicionar Escova Interdental ao carrinho">Adicionar ao carrinho</button>
+          </article>
+
+          <article class="produto" data-nome="Enxaguante Bucal" data-preco="40.00" tabindex="0">
+            <img src="enxaguante-bucal.jpg" alt="Enxaguante bucal" loading="lazy" />
+            <h3>Enxaguante Bucal</h3>
+            <p>R$ 40,00</p>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Enxaguante Bucal', 40.00)" aria-label="Adicionar Enxaguante Bucal ao carrinho">Adicionar ao carrinho</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section" tabindex="-1">
+      <div class="container">
+        <h2>Sobre Nós</h2>
+        <p>Especializados em produtos odontológicos de alta qualidade, atendemos dentistas, clínicas e consultórios com excelência no atendimento.</p>
+      </div>
+    </section>
+
+    <section id="blog" class="section" tabindex="-1">
+      <div class="container">
+        <h2>Blog</h2>
+        <p>Fique por dentro das últimas tendências e dicas da odontologia.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="section" tabindex="-1">
+      <div class="container">
+        <h2>Dúvidas Frequentes</h2>
+        <p>Encontre respostas sobre entregas, trocas, produtos e mais.</p>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="section" tabindex="-1">
+      <div class="container">
+        <h2>O que dizem nossos clientes</h2>
+        <blockquote>“Produtos excelentes! Atendimento rápido e eficiente.”</blockquote>
+        <blockquote>“Minha clínica só compra aqui. Qualidade garantida!”</blockquote>
+      </div>
+    </section>
+
+    <section id="contato" class="section" tabindex="-1">
+      <div class="container">
+        <h2>Fale Conosco</h2>
+        <form action="enviar_contato.php" method="post" class="form-contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="pagamento" class="section" tabindex="-1">
+      <div class="container">
+        <h2>Formas de Pagamento</h2>
+        <p>Aceitamos cartões Visa, Mastercard, Pix, boleto bancário e transferência. Pagamento seguro garantido!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 OdontoPro. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
