@@ -34,7 +34,7 @@ Clone este repositório:
 bash
 Copiar
 Editar
-git clone https://github.com/seu-usuario/odontopro.git
+git clone https://github.com/awaldige/odontopro.git
 Abra o index.html no seu navegador.
 
 Adicione produtos ao carrinho clicando no botão.
