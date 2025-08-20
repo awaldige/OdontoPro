@@ -65,6 +65,7 @@
   </header>
 
   <main>
+    <!-- Home -->
     <section id="home" class="section" tabindex="-1">
       <div class="container">
         <h2>Bem-vindo à OdontoPro!</h2>
@@ -72,71 +73,98 @@
       </div>
     </section>
 
+    <!-- Produtos -->
     <section id="produtos" class="section" tabindex="-1">
       <div class="container">
         <h2>Nossos Produtos</h2>
         <div class="produto-grid" id="lista-produtos">
-          <!-- Exemplo de Produto -->
+          <!-- Produto 1 -->
           <article class="produto" data-nome="Escova Elétrica" data-preco="15.00" tabindex="0">
             <img src="escova-eletrica.jpg" alt="Escova dental elétrica" loading="lazy" />
             <h3>Escova Elétrica</h3>
             <p>R$ 15,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Escova Elétrica', 15.00)" aria-label="Adicionar Escova Elétrica ao carrinho">Adicionar ao carrinho</button>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Escova Elétrica', 15.00, 'escova-eletrica.jpg')">Adicionar ao carrinho</button>
           </article>
 
-          <!-- Demais produtos seguem a mesma estrutura -->
+          <!-- Produto 2 -->
           <article class="produto" data-nome="Kit Clareador" data-preco="89.00" tabindex="0">
             <img src="clareador-dental.jpg" alt="Kit clareador dental" loading="lazy" />
             <h3>Kit Clareador Dental</h3>
             <p>R$ 89,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Kit Clareador', 89.00)" aria-label="Adicionar Kit Clareador ao carrinho">Adicionar ao carrinho</button>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Kit Clareador', 89.00, 'clareador-dental.jpg')">Adicionar ao carrinho</button>
           </article>
 
+          <!-- Produto 3 -->
           <article class="produto" data-nome="Fio Dental com Sabor" data-preco="8.50" tabindex="0">
             <img src="fio-dental-com-sabor.jpg" alt="Fio dental com sabor" loading="lazy" />
             <h3>Fio Dental com Sabor</h3>
             <p>R$ 8,50</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Fio Dental com Sabor', 8.50)" aria-label="Adicionar Fio Dental com Sabor ao carrinho">Adicionar ao carrinho</button>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Fio Dental com Sabor', 8.50, 'fio-dental-com-sabor.jpg')">Adicionar ao carrinho</button>
           </article>
 
+          <!-- Produto 4 -->
           <article class="produto" data-nome="Material Odontológico" data-preco="150.00" tabindex="0">
             <img src="materiais-odontologicos.jpg" alt="Material odontológico" loading="lazy" />
             <h3>Material Odontológico</h3>
             <p>R$ 150,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Material Odontológico', 150.00)" aria-label="Adicionar Material Odontológico ao carrinho">Adicionar ao carrinho</button>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Material Odontológico', 150.00, 'materiais-odontologicos.jpg')">Adicionar ao carrinho</button>
           </article>
 
+          <!-- Produto 5 -->
           <article class="produto" data-nome="Papel Carbono - Super Carbon" data-preco="18.50" tabindex="0">
             <img src="papel-carbon.jpg" alt="Papel carbono Super Carbon" loading="lazy" />
             <h3>Papel Carbono - Super Carbon</h3>
             <p>R$ 18,50</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Papel Carbono - Super Carbon', 18.50)" aria-label="Adicionar Papel Carbono - Super Carbon ao carrinho">Adicionar ao carrinho</button>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Papel Carbono - Super Carbon', 18.50, 'papel-carbon.jpg')">Adicionar ao carrinho</button>
           </article>
 
+          <!-- Produto 6 -->
           <article class="produto" data-nome="Afastador Labial C Black" data-preco="24.00" tabindex="0">
             <img src="afastador-labial.jpeg" alt="Afastador labial em C Black" loading="lazy" />
             <h3>Afastador Labial C Black</h3>
             <p>R$ 24,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Afastador Labial C Black', 24.00)" aria-label="Adicionar Afastador Labial C Black ao carrinho">Adicionar ao carrinho</button>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Afastador Labial C Black', 24.00, 'afastador-labial.jpeg')">Adicionar ao carrinho</button>
           </article>
 
+          <!-- Produto 7 -->
           <article class="produto" data-nome="Escova Interdental" data-preco="12.00" tabindex="0">
             <img src="escova-interdental.jpg" alt="Escova interdental" loading="lazy" />
             <h3>Escova Interdental</h3>
             <p>R$ 12,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Escova Interdental', 12.00)" aria-label="Adicionar Escova Interdental ao carrinho">Adicionar ao carrinho</button>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Escova Interdental', 12.00, 'escova-interdental.jpg')">Adicionar ao carrinho</button>
           </article>
 
+          <!-- Produto 8 -->
           <article class="produto" data-nome="Enxaguante Bucal" data-preco="40.00" tabindex="0">
             <img src="enxaguante-bucal.jpg" alt="Enxaguante bucal" loading="lazy" />
             <h3>Enxaguante Bucal</h3>
             <p>R$ 40,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Enxaguante Bucal', 40.00)" aria-label="Adicionar Enxaguante Bucal ao carrinho">Adicionar ao carrinho</button>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Enxaguante Bucal', 40.00, 'enxaguante-bucal.jpg')">Adicionar ao carrinho</button>
           </article>
+
+          <!-- Produto 9 -->
+          <article class="produto" data-nome="Estojo para aparelho móvel Prata" data-preco="18.70" tabindex="0">
+            <img src="Estojo para aparelho móvel Prata.jpg" alt="Estojo para aparelho móvel Prata" loading="lazy" />
+            <h3>Estojo para aparelho móvel Prata</h3>
+            <p>R$ 18,70</p>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Estojo para aparelho móvel Prata', 18.70, 'estojo-aparelho.jpg')">Adicionar ao carrinho</button>
+          </article>
+
+          <!-- Produto 10 -->
+          <article class="produto" data-nome="Luva de Procedimento de Látex com Pó - Descarpack" data-preco="28.99" tabindex="0">
+            <img src="embalagem-luva-de-procedimento.jpg" alt="Luva de Procedimento de Látex com Pó - Descarpack" loading="lazy" />
+            <h3>Luva de Procedimento de Látex com Pó - Descarpack</h3>
+            <p>R$ 28,99</p>
+            <button class="btn" type="button" onclick="adicionarAoCarrinho('Luva de Procedimento de Látex com Pó - Descarpack', 28.99, 'embalagem-luva-de-procedimento.jpg')">Adicionar ao carrinho</button>
+          </article>
+
         </div>
+
+        <div id="paginacao" class="paginacao"></div>
       </div>
     </section>
 
+    <!-- Outras seções -->
     <section id="sobre" class="section" tabindex="-1">
       <div class="container">
         <h2>Sobre Nós</h2>
@@ -169,15 +197,18 @@
     <section id="contato" class="section" tabindex="-1">
       <div class="container">
         <h2>Fale Conosco</h2>
-        <form action="enviar_contato.php" method="post" class="form-contato">
+        <form action="https://formsubmit.co/awaldige@gmail.com" method="POST" class="form-contato">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://odonto-pro-lyart.vercel.app/obrigado.html">
+
           <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required />
+          <input type="text" id="nome" name="name" required />
 
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required />
 
           <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" required></textarea>
+          <textarea id="mensagem" name="message" required></textarea>
 
           <button type="submit" class="btn">Enviar</button>
         </form>
@@ -201,12 +232,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
