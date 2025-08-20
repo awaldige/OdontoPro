@@ -19,7 +19,7 @@ html {
 /* Fundo e filtro para modo claro */
 body {
   position: relative;
-  background-image: url('odontopro.png'); /* caminho da imagem */
+  background-image: url('odontopro.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -34,7 +34,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.3); /* filtro semi-transparente para legibilidade */
+  background: rgba(0, 0, 0, 0.3);
   pointer-events: none;
   z-index: -1;
 }
@@ -46,7 +46,7 @@ body.escuro {
 }
 
 body.escuro::before {
-  background: rgba(0, 0, 0, 0.6); /* filtro mais forte para modo escuro */
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* Container principal */
@@ -55,7 +55,7 @@ body.escuro::before {
   margin: 0 auto;
   padding: 0 1rem;
   position: relative;
-  z-index: 1; /* garante que fique acima do filtro */
+  z-index: 1;
 }
 
 /* Header com flexbox */
@@ -199,12 +199,19 @@ body.escuro #btn-tema {
   display: none;
 }
 
-/* Ajustes para tema escuro do carrinho */
 body.escuro #area-carrinho {
   background-color: #2a2a2a;
   color: #ddd;
   border-color: #005fa3;
   box-shadow: 0 4px 8px rgba(255,255,255,0.2);
+}
+
+/* Ajuste do tamanho das imagens no carrinho */
+.item-carrinho img.imagem-carrinho {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 0.3rem;
 }
 
 /* Grade dos produtos */
@@ -366,12 +373,60 @@ body.escuro .btn:focus-visible {
   }
 }
 
-/* Ajuste do tamanho das imagens no carrinho */
-.item-carrinho img.imagem-carrinho {
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 0.3rem;
+/* Paginação */
+.paginacao {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.paginacao button {
+  background-color: #fff;
+  border: 2px solid #0077cc;
+  color: #0077cc;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.paginacao button:hover,
+.paginacao button:focus-visible {
+  background-color: #0077cc;
+  color: #fff;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.paginacao button.active {
+  background-color: #0077cc;
+  color: #fff;
+  pointer-events: none;
+}
+
+.paginacao button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+body.escuro .paginacao button {
+  background-color: #2a2a2a;
+  border-color: #005fa3;
+  color: #ddd;
+}
+
+body.escuro .paginacao button:hover,
+body.escuro .paginacao button:focus-visible {
+  background-color: #005fa3;
+  color: #fff;
+}
+
+body.escuro .paginacao button.active {
+  background-color: #005fa3;
+  color: #fff;
 }
 
 
