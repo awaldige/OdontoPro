@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const listaCarrinho = document.getElementById('lista-itens-carrinho');
   const contadorCarrinho = document.getElementById('contador-carrinho');
 
-  // Botões do carrinho
   const btnLimpar = document.createElement('button');
   btnLimpar.id = 'limpar-carrinho';
   btnLimpar.textContent = 'Limpar Carrinho';
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
   carrinho.appendChild(btnLimpar);
   carrinho.appendChild(btnFinalizar);
 
-  // Abrir/fechar carrinho
   carrinhoBtn.addEventListener('click', () => {
     carrinho.toggleAttribute('hidden');
   });
@@ -31,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     carrinho.setAttribute('hidden', '');
   });
 
-  // --- Itens do carrinho ---
   let itensCarrinho = [];
 
   function atualizarCarrinho() {
@@ -70,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function adicionarAoCarrinho(nome, preco, img) {
     itensCarrinho.push({ nome, preco, img });
     atualizarCarrinho();
-    carrinho.removeAttribute('hidden'); // abre sempre que adiciona
+    carrinho.removeAttribute('hidden');
   }
 
   function removerDoCarrinho(index) {
@@ -102,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Paginação e Busca ---
   const listaProdutosContainer = document.getElementById("lista-produtos");
   const paginacaoContainer = document.getElementById("paginacao");
-  const produtosPorPagina = 8; // 8 produtos por página
+  const produtosPorPagina = 8;
   let paginaAtual = 1;
   let produtosFiltrados = Array.from(listaProdutosContainer.querySelectorAll(".produto"));
 
@@ -111,9 +108,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const start = (paginaAtual - 1) * produtosPorPagina;
     const end = paginaAtual * produtosPorPagina;
 
-    produtosFiltrados.forEach((prod, index) => {
-      prod.style.display = index >= start && index < end ? 'flex' : 'none';
-    });
+    // Esconde todos os produtos
+    Array.from(listaProdutosContainer.querySelectorAll(".produto")).forEach(prod => prod.style.display = 'none');
+
+    // Mostra produtos filtrados na página atual
+    produtosFiltrados.slice(start, end).forEach(prod => prod.style.display = 'flex');
+
+    // Nenhum produto encontrado
+    if (produtosFiltrados.length === 0) {
+      listaProdutosContainer.innerHTML = `<p style="text-align:center; padding:2rem; color:#777;">Nenhum produto encontrado</p>`;
+      paginacaoContainer.innerHTML = '';
+      return;
+    }
 
     criarPaginacao(totalPaginas);
   }
@@ -135,14 +141,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // --- Busca de produtos ---
+  // --- Busca ---
   const campoBusca = document.getElementById('campo-busca');
   campoBusca.addEventListener('input', () => {
     const filtro = campoBusca.value.toLowerCase();
-    produtosFiltrados = Array.from(listaProdutosContainer.querySelectorAll(".produto")).filter(prod => {
+    const todosProdutos = Array.from(listaProdutosContainer.querySelectorAll(".produto"));
+
+    produtosFiltrados = todosProdutos.filter(prod => {
       const nome = prod.getAttribute('data-nome').toLowerCase();
       return nome.includes(filtro);
     });
+
     paginaAtual = 1;
     atualizarListaProdutos();
   });
@@ -150,6 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inicializa
   atualizarListaProdutos();
 
-  // Exponha função global para uso em HTML
+  // Exponha função global para HTML
   window.adicionarAoCarrinho = adicionarAoCarrinho;
 });
