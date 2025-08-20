@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const end = paginaAtual * produtosPorPagina;
 
     produtosFiltrados.forEach((prod, index) => {
-      prod.style.display = index >= start && index < end ? 'flex' : 'none';
+      prod.style.display = index >= start && index < end ? '' : 'none';
     });
 
     criarPaginacao(totalPaginas);
@@ -138,9 +138,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Busca ---
   const campoBusca = document.getElementById('campo-busca');
   campoBusca.addEventListener('input', () => {
-    const filtro = campoBusca.value.toLowerCase();
+    const filtro = campoBusca.value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     produtosFiltrados = Array.from(listaProdutosContainer.querySelectorAll(".produto")).filter(prod => {
-      const nome = prod.getAttribute('data-nome').toLowerCase();
+      const nome = prod.getAttribute('data-nome').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
       return nome.includes(filtro);
     });
     paginaAtual = 1;
