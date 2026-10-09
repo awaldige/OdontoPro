@@ -100,10 +100,14 @@ Não é necessária a instalação de dependências para executar a versão est�
 
 ## 👨‍💻 Autor
 
-**André Waldige — AW TECHNOLOGY**
+👨‍💻 Autor
+André Waldige — AW TECHNOLOGY
 
-🔗 [GitHub: @awaldige](https://github.com/awaldige)
+GitHub: (https://github.com/awaldige)
 
+Portfólio: (https://andre-waldige.vercel.app)
+
+E-mail: awaldige@gmail.com
 ---
 
 ⭐ Gostou do projeto? Deixe uma estrela no repositório!
