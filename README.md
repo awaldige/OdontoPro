@@ -1,8 +1,11 @@
-# 🦷 OdontoPro — Loja de Produtos Odontológicos
 
-O **OdontoPro** é um projeto de loja virtual de produtos odontológicos, desenvolvido com **HTML5, CSS3 e JavaScript puro**. Possui interface moderna e responsiva, com foco na experiência do usuário, acessibilidade e boas práticas de desenvolvimento front-end.
+# 🦷 OdontoPro — Loja Demonstrativa de Produtos Odontológicos
 
-O projeto foi desenvolvido para demonstrar conhecimentos em criação de interfaces web interativas e compor um portfólio de desenvolvimento.
+O **OdontoPro** é um projeto demonstrativo de uma loja virtual de produtos odontológicos, desenvolvido com **HTML5, CSS3 e JavaScript puro**.
+
+O projeto recebeu uma atualização de interface e funcionalidades, com foco em experiência do usuário, organização do catálogo, responsividade, acessibilidade e boas práticas de desenvolvimento front-end.
+
+Foi desenvolvido para demonstrar habilidades em criação de interfaces web interativas e integrar meu portfólio de desenvolvimento.
 
 ---
 
@@ -30,17 +33,31 @@ O projeto foi desenvolvido para demonstrar conhecimentos em criação de interfa
 
 ## ✨ Funcionalidades
 
-- 🛍️ Catálogo visual de produtos odontológicos
-- 📱 Layout moderno e responsivo
-- 🌙☀️ Alternância entre modo claro e escuro
-- 🛒 Carrinho de compras interativo
-- 🔢 Contador de itens no carrinho
-- ❌ Remoção de produtos do carrinho
-- 💾 Preferência de tema salva com `localStorage`
-- ♿ Recursos de acessibilidade com atributos `aria-label` e `aria-expanded`
-- ⚡ Interface leve, com tecnologias nativas da web
+### Catálogo de produtos
+- 🛍️ Exibição de 11 produtos odontológicos.
+- 🔎 Busca de produtos pelo nome.
+- 🗂️ Filtros por categoria.
+- 📄 Paginação automática do catálogo.
 
-> **Observação:** o carrinho é interativo no front-end. A integração com pagamentos reais e o processamento de pedidos por um backend não fazem parte das funcionalidades documentadas nesta versão.
+### Experiência do usuário
+- 📱 Layout responsivo para diferentes dispositivos.
+- 🌙☀️ Alternância entre temas claro e escuro.
+- 💾 Preferências salvas no navegador.
+- ♿ Recursos de acessibilidade e navegação por teclado.
+
+### Carrinho demonstrativo
+- 🛒 Adição de produtos ao carrinho.
+- 🔢 Controle de quantidades.
+- 💰 Cálculo automático de subtotais e total.
+- ❌ Remoção individual de produtos.
+- 🧹 Limpeza do carrinho.
+- 📋 Visualização de resumo demonstrativo.
+- 💾 Persistência local dos dados do carrinho.
+
+### Formulário
+- 📝 Formulário de contato com validação no navegador.
+- ⚠️ Mensagens informativas para o usuário.
+- 🔒 Nenhum dado é enviado ou armazenado em servidor.
 
 ---
 
@@ -49,9 +66,11 @@ O projeto foi desenvolvido para demonstrar conhecimentos em criação de interfa
 | Tecnologia | Aplicação |
 |---|---|
 | HTML5 | Estrutura semântica das páginas |
-| CSS3 | Estilização, Flexbox, responsividade e temas |
-| JavaScript (Vanilla) | Manipulação do DOM, eventos e interatividade |
-| LocalStorage | Armazenamento local da preferência de tema |
+| CSS3 | Estilização, responsividade e temas |
+| JavaScript (Vanilla) | Eventos, manipulação do DOM e funcionalidades |
+| LocalStorage | Persistência local do tema e carrinho |
+| Git e GitHub | Controle de versão e hospedagem do código |
+| Vercel | Publicação da demonstração |
 
 ---
 
@@ -59,55 +78,73 @@ O projeto foi desenvolvido para demonstrar conhecimentos em criação de interfa
 
 ```text
 OdontoPro/
-├── index.html    # Página principal
-├── style.css     # Estilos, layout e temas
-└── script.js     # Lógica do carrinho e alternância de tema
+├── index.html
+├── style.css
+├── script.js
+├── obrigado.html
+├── README.md
+├── odontopro.png
+└── imagens dos produtos
 ```
 
 ---
 
 ## ▶️ Como Executar
 
-Não é necessária a instalação de dependências para executar a versão estática do projeto.
+Não é necessária a instalação de dependências.
 
 1. Clone o repositório:
 
-   ```bash
-   git clone https://github.com/awaldige/OdontoPro.git
-   ```
+```bash
+git clone https://github.com/awaldige/OdontoPro.git
+```
 
-2. Acesse a pasta do projeto:
+2. Entre na pasta:
 
-   ```bash
-   cd OdontoPro
-   ```
+```bash
+cd OdontoPro
+```
 
 3. Abra o arquivo `index.html` no navegador.
 
-4. Explore os produtos, teste o carrinho e alterne entre os temas claro e escuro.
+4. Explore o catálogo, teste a busca, os filtros, o carrinho e a alternância de temas.
 
 ---
 
-## 🔮 Melhorias Futuras
+## 🔒 Importante — Projeto Demonstrativo
 
-- 💳 Integração com gateway de pagamento, como Stripe ou Mercado Pago
-- 🔌 Desenvolvimento de uma API e backend para produtos e pedidos
-- 👤 Autenticação e gerenciamento de usuários
-- 🛒 Persistência do carrinho entre sessões e dispositivos
-- 📲 Transformação em Progressive Web App (PWA), com suporte offline
+O OdontoPro é exclusivamente demonstrativo.
+
+- Não realiza vendas reais.
+- Não processa pagamentos.
+- Não registra pedidos.
+- Não envia mensagens de contato.
+- Não possui integração com serviços de pagamento ou backend comercial.
+
+Os dados do carrinho e a preferência de tema ficam armazenados localmente no navegador por meio do `localStorage`.
+
+---
+
+## 🔮 Possíveis Evoluções
+
+- 💳 Integração com gateways de pagamento.
+- 🔌 Desenvolvimento de API e backend.
+- 👤 Autenticação e gerenciamento de usuários.
+- 📦 Administração de produtos e pedidos.
+- 📲 Transformação em Progressive Web App (PWA).
+
+Essas funcionalidades não fazem parte da versão demonstrativa atual.
 
 ---
 
 ## 👨‍💻 Autor
 
-👨‍💻 Autor
-André Waldige — AW TECHNOLOGY
+**André Waldige — AW TECHNOLOGY**
 
-GitHub: (https://github.com/awaldige)
+- GitHub: https://github.com/awaldige
+- Portfólio: https://andre-waldige.vercel.app
+- E-mail: awaldige@gmail.com
 
-Portfólio: (https://andre-waldige.vercel.app)
-
-E-mail: awaldige@gmail.com
 ---
 
 ⭐ Gostou do projeto? Deixe uma estrela no repositório!

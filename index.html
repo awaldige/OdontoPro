@@ -1,243 +1,1015 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Loja especializada em produtos odontológicos para dentistas e clínicas. Compre escovas, clareadores, materiais e muito mais." />
-  <title>Loja OdontoPro</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>OdontoPro | Produtos e Materiais Odontológicos</title>
+
+  <meta
+    name="description"
+    content="Conheça a OdontoPro, uma loja demonstrativa de produtos e materiais odontológicos. Explore nosso catálogo e teste as funcionalidades."
+  >
+
+  <meta name="theme-color" content="#10243e">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
+
+  <!-- AVISO DE DEMONSTRAÇÃO -->
+  <div class="demo-bar">
+    <span>⚠️ Projeto demonstrativo</span>
+    <span>Produtos, preços e operações são ilustrativos. Não realizamos vendas reais.</span>
+  </div>
+
+  <!-- CABEÇALHO -->
+  <header class="site-header">
     <div class="container header-flex">
-      <h1>OdontoPro</h1>
 
-      <div class="busca-produto">
-        <label for="campo-busca" class="sr-only">Buscar produtos</label>
-        <input type="text" id="campo-busca" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+      <a href="#home" class="logo" aria-label="OdontoPro - Página inicial">
+        <span class="logo-icon">✚</span>
+        <span>Odonto<span>Pro</span></span>
+      </a>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Menu principal">
+        <a href="#home">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+
+        <button
+          type="button"
+          id="btn-tema"
+          class="theme-button"
+          aria-label="Alternar tema"
+          title="Alternar tema"
+        >
+          🌙
+        </button>
+
+        <button
+          type="button"
+          id="carrinho-btn"
+          class="cart-button"
+          aria-label="Abrir carrinho"
+          aria-controls="area-carrinho"
+          aria-expanded="false"
+        >
+          <span class="cart-icon">🛒</span>
+          <span class="cart-label">Carrinho</span>
+          <span id="contador-carrinho" class="cart-counter">0</span>
+        </button>
+
       </div>
-
-      <button id="btn-tema" aria-label="Alternar tema escuro/claro" title="Alternar tema escuro/claro">
-        🌙
-      </button>
-
-      <button
-        class="carrinho"
-        id="carrinho-btn"
-        aria-label="Abrir carrinho de compras"
-        title="Abrir carrinho de compras"
-        aria-expanded="false"
-        aria-controls="area-carrinho"
-      >
-        🛒 <span id="contador-carrinho" aria-live="polite" aria-atomic="true">0</span>
-      </button>
     </div>
-
-    <div
-      id="area-carrinho"
-      class="carrinho-itens"
-      role="region"
-      aria-label="Itens no carrinho"
-      aria-live="polite"
-      aria-atomic="true"
-      hidden
-    >
-      <h2>Itens no Carrinho</h2>
-      <ul id="lista-itens-carrinho" tabindex="0">
-        <!-- Itens adicionados aparecerão aqui -->
-      </ul>
-      <button id="fechar-carrinho" class="btn" type="button" aria-label="Fechar carrinho">
-        Fechar
-      </button>
-    </div>
-
-    <nav aria-label="Menu principal">
-      <ul class="menu">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
-    <!-- Home -->
-    <section id="home" class="section" tabindex="-1">
-      <div class="container">
-        <h2>Bem-vindo à OdontoPro!</h2>
-        <p>Os melhores produtos odontológicos para profissionais e clínicas.</p>
+
+    <!-- APRESENTAÇÃO -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+
+        <div class="hero-text">
+
+          <span class="hero-tag">ODONTOLOGIA • TECNOLOGIA • QUALIDADE</span>
+
+          <h1>
+            Tudo para cuidar de
+            <span>cada sorriso.</span>
+          </h1>
+
+          <p>
+            Explore um catálogo demonstrativo de produtos e materiais
+            odontológicos em uma experiência de loja virtual moderna,
+            prática e intuitiva.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#produtos" class="btn btn-primary">
+              Explorar produtos
+              <span>→</span>
+            </a>
+
+            <a href="#sobre" class="btn btn-outline">
+              Conheça a OdontoPro
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <div>
+              <strong>11</strong>
+              <span>Produtos no catálogo</span>
+            </div>
+
+            <div>
+              <strong>100%</strong>
+              <span>Experiência demonstrativa</span>
+            </div>
+
+            <div>
+              <strong>24/7</strong>
+              <span>Navegação online</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <img
+              src="odontopro.png"
+              alt="Identidade visual da OdontoPro"
+            >
+
+            <div class="hero-image-caption">
+              <span class="caption-icon">✚</span>
+              <div>
+                <strong>OdontoPro</strong>
+                <small>Tecnologia para o cuidado odontológico</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-floating hero-floating-top">
+            <span>🦷</span>
+            <div>
+              <strong>Saúde bucal</strong>
+              <small>Cuidado e prevenção</small>
+            </div>
+          </div>
+
+          <div class="hero-floating hero-floating-bottom">
+            <span>✨</span>
+            <div>
+              <strong>Experiência digital</strong>
+              <small>Simples e intuitiva</small>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Produtos -->
-    <section id="produtos" class="section" tabindex="-1">
+    <!-- BENEFÍCIOS -->
+    <section class="benefits-section" id="diferenciais">
+      <div class="container benefits-grid">
+
+        <article class="benefit-item">
+          <span class="benefit-icon">🦷</span>
+          <div>
+            <h3>Catálogo organizado</h3>
+            <p>Produtos apresentados de forma clara e objetiva.</p>
+          </div>
+        </article>
+
+        <article class="benefit-item">
+          <span class="benefit-icon">🔎</span>
+          <div>
+            <h3>Busca inteligente</h3>
+            <p>Encontre produtos com facilidade.</p>
+          </div>
+        </article>
+
+        <article class="benefit-item">
+          <span class="benefit-icon">🛒</span>
+          <div>
+            <h3>Carrinho interativo</h3>
+            <p>Simule a seleção e a organização dos produtos.</p>
+          </div>
+        </article>
+
+        <article class="benefit-item">
+          <span class="benefit-icon">📱</span>
+          <div>
+            <h3>Design responsivo</h3>
+            <p>Uma experiência adaptada a diferentes telas.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section class="products-section section-spacing" id="produtos">
       <div class="container">
-        <h2>Nossos Produtos</h2>
+
+        <div class="section-heading">
+          <div>
+            <span class="section-tag">NOSSO CATÁLOGO</span>
+            <h2>Produtos em destaque</h2>
+            <p>
+              Conheça nossa seleção demonstrativa de produtos
+              e materiais odontológicos.
+            </p>
+          </div>
+
+          <span class="products-total">11 produtos ilustrativos</span>
+        </div>
+
+        <!-- BUSCA -->
+        <div class="catalog-toolbar">
+
+          <div class="search-box">
+            <span class="search-icon">⌕</span>
+
+            <input
+              type="search"
+              id="campo-busca"
+              placeholder="Buscar produto pelo nome..."
+              aria-label="Buscar produtos"
+              autocomplete="off"
+            >
+
+            <button
+              type="button"
+              id="limpar-busca"
+              class="clear-search"
+              aria-label="Limpar busca"
+              hidden
+            >
+              ✕
+            </button>
+          </div>
+
+          <span class="catalog-hint">
+            Selecione uma categoria ou pesquise um produto.
+          </span>
+
+        </div>
+
+        <!-- FILTROS -->
+        <div class="category-filters" id="filtros-categorias">
+
+          <button
+            type="button"
+            class="filter-button ativo"
+            data-categoria="todos"
+            aria-pressed="true"
+          >
+            Todos
+          </button>
+
+          <button
+            type="button"
+            class="filter-button"
+            data-categoria="higiene"
+            aria-pressed="false"
+          >
+            Higiene bucal
+          </button>
+
+          <button
+            type="button"
+            class="filter-button"
+            data-categoria="equipamentos"
+            aria-pressed="false"
+          >
+            Equipamentos
+          </button>
+
+          <button
+            type="button"
+            class="filter-button"
+            data-categoria="materiais"
+            aria-pressed="false"
+          >
+            Materiais
+          </button>
+
+          <button
+            type="button"
+            class="filter-button"
+            data-categoria="acessorios"
+            aria-pressed="false"
+          >
+            Acessórios
+          </button>
+
+        </div>
+
+        <!-- LISTA DE PRODUTOS -->
         <div class="produto-grid" id="lista-produtos">
-          <!-- Produto 1 -->
-          <article class="produto" data-nome="Escova Elétrica" data-preco="15.00" tabindex="0">
-            <img src="escova-eletrica.jpg" alt="Escova dental elétrica" loading="lazy" />
-            <h3>Escova Elétrica</h3>
-            <p>R$ 15,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Escova Elétrica', 15.00, 'escova-eletrica.jpg')">Adicionar ao carrinho</button>
+
+          <!-- PRODUTO 1 -->
+          <article class="produto" data-nome="Escova Elétrica" data-categoria="higiene">
+            <div class="product-image">
+              <span class="product-category">Higiene bucal</span>
+              <img src="escova-eletrica.jpg" alt="Escova elétrica" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-001</span>
+              <h3>Escova Elétrica</h3>
+              <p class="product-description">Praticidade para a rotina de higiene bucal.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 15,00</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Escova Elétrica" data-preco="15.00" data-img="escova-eletrica.jpg" aria-label="Adicionar Escova Elétrica ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
 
-          <!-- Produto 2 -->
-          <article class="produto" data-nome="Kit Clareador" data-preco="89.00" tabindex="0">
-            <img src="clareador-dental.jpg" alt="Kit clareador dental" loading="lazy" />
-            <h3>Kit Clareador Dental</h3>
-            <p>R$ 89,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Kit Clareador', 89.00, 'clareador-dental.jpg')">Adicionar ao carrinho</button>
+          <!-- PRODUTO 2 -->
+          <article class="produto" data-nome="Kit Clareador Dental" data-categoria="higiene">
+            <div class="product-image">
+              <span class="product-category">Higiene bucal</span>
+              <img src="clareador-dental.jpg" alt="Kit clareador dental" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-002</span>
+              <h3>Kit Clareador Dental</h3>
+              <p class="product-description">Produto ilustrativo para cuidados odontológicos.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 89,00</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Kit Clareador Dental" data-preco="89.00" data-img="clareador-dental.jpg" aria-label="Adicionar Kit Clareador Dental ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
 
-          <!-- Produto 3 -->
-          <article class="produto" data-nome="Fio Dental com Sabor" data-preco="8.50" tabindex="0">
-            <img src="fio-dental-com-sabor.jpg" alt="Fio dental com sabor" loading="lazy" />
-            <h3>Fio Dental com Sabor</h3>
-            <p>R$ 8,50</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Fio Dental com Sabor', 8.50, 'fio-dental-com-sabor.jpg')">Adicionar ao carrinho</button>
+          <!-- PRODUTO 3 -->
+          <article class="produto" data-nome="Fio Dental com Sabor" data-categoria="higiene">
+            <div class="product-image">
+              <span class="product-category">Higiene bucal</span>
+              <img src="fio-dental-com-sabor.jpg" alt="Fio dental com sabor" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-003</span>
+              <h3>Fio Dental com Sabor</h3>
+              <p class="product-description">Um item essencial para a higiene diária.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 8,50</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Fio Dental com Sabor" data-preco="8.50" data-img="fio-dental-com-sabor.jpg" aria-label="Adicionar Fio Dental com Sabor ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
 
-          <!-- Produto 4 -->
-          <article class="produto" data-nome="Material Odontológico" data-preco="150.00" tabindex="0">
-            <img src="materiais-odontologicos.jpg" alt="Material odontológico" loading="lazy" />
-            <h3>Material Odontológico</h3>
-            <p>R$ 150,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Material Odontológico', 150.00, 'materiais-odontologicos.jpg')">Adicionar ao carrinho</button>
+          <!-- PRODUTO 4 -->
+          <article class="produto" data-nome="Material Odontológico" data-categoria="materiais">
+            <div class="product-image">
+              <span class="product-category">Materiais</span>
+              <img src="materiais-odontologicos.jpg" alt="Materiais odontológicos" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-004</span>
+              <h3>Material Odontológico</h3>
+              <p class="product-description">Materiais para compor um ambiente odontológico.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 150,00</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Material Odontológico" data-preco="150.00" data-img="materiais-odontologicos.jpg" aria-label="Adicionar Material Odontológico ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
 
-          <!-- Produto 5 -->
-          <article class="produto" data-nome="Papel Carbono - Super Carbon" data-preco="18.50" tabindex="0">
-            <img src="papel-carbon.jpg" alt="Papel carbono Super Carbon" loading="lazy" />
-            <h3>Papel Carbono - Super Carbon</h3>
-            <p>R$ 18,50</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Papel Carbono - Super Carbon', 18.50, 'papel-carbon.jpg')">Adicionar ao carrinho</button>
+          <!-- PRODUTO 5 -->
+          <article class="produto" data-nome="Papel Carbono - Super Carbon" data-categoria="materiais">
+            <div class="product-image">
+              <span class="product-category">Materiais</span>
+              <img src="papel-carbon.jpg" alt="Papel carbono Super Carbon" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-005</span>
+              <h3>Papel Carbono - Super Carbon</h3>
+              <p class="product-description">Material odontológico para uso profissional.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 18,50</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Papel Carbono - Super Carbon" data-preco="18.50" data-img="papel-carbon.jpg" aria-label="Adicionar Papel Carbono ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
 
-          <!-- Produto 6 -->
-          <article class="produto" data-nome="Afastador Labial C Black" data-preco="24.00" tabindex="0">
-            <img src="afastador-labial.jpeg" alt="Afastador labial em C Black" loading="lazy" />
-            <h3>Afastador Labial C Black</h3>
-            <p>R$ 24,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Afastador Labial C Black', 24.00, 'afastador-labial.jpeg')">Adicionar ao carrinho</button>
+          <!-- PRODUTO 6 -->
+          <article class="produto" data-nome="Afastador Labial C Black" data-categoria="materiais">
+            <div class="product-image">
+              <span class="product-category">Materiais</span>
+              <img src="afastador-labial.jpeg" alt="Afastador labial C Black" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-006</span>
+              <h3>Afastador Labial C Black</h3>
+              <p class="product-description">Acessório utilizado em procedimentos odontológicos.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 24,00</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Afastador Labial C Black" data-preco="24.00" data-img="afastador-labial.jpeg" aria-label="Adicionar Afastador Labial ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
 
-          <!-- Produto 7 -->
-          <article class="produto" data-nome="Escova Interdental" data-preco="12.00" tabindex="0">
-            <img src="escova-interdental.jpg" alt="Escova interdental" loading="lazy" />
-            <h3>Escova Interdental</h3>
-            <p>R$ 12,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Escova Interdental', 12.00, 'escova-interdental.jpg')">Adicionar ao carrinho</button>
+          <!-- PRODUTO 7 -->
+          <article class="produto" data-nome="Escova Interdental" data-categoria="higiene">
+            <div class="product-image">
+              <span class="product-category">Higiene bucal</span>
+              <img src="escova-interdental.jpg" alt="Escova interdental" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-007</span>
+              <h3>Escova Interdental</h3>
+              <p class="product-description">Auxilia na limpeza dos espaços entre os dentes.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 12,00</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Escova Interdental" data-preco="12.00" data-img="escova-interdental.jpg" aria-label="Adicionar Escova Interdental ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
 
-          <!-- Produto 8 -->
-          <article class="produto" data-nome="Enxaguante Bucal" data-preco="40.00" tabindex="0">
-            <img src="enxaguante-bucal.jpg" alt="Enxaguante bucal" loading="lazy" />
-            <h3>Enxaguante Bucal</h3>
-            <p>R$ 40,00</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Enxaguante Bucal', 40.00, 'enxaguante-bucal.jpg')">Adicionar ao carrinho</button>
+          <!-- PRODUTO 8 -->
+          <article class="produto" data-nome="Enxaguante Bucal" data-categoria="higiene">
+            <div class="product-image">
+              <span class="product-category">Higiene bucal</span>
+              <img src="enxaguante-bucal.jpg" alt="Enxaguante bucal" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-008</span>
+              <h3>Enxaguante Bucal</h3>
+              <p class="product-description">Item complementar para a rotina de higiene bucal.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 40,00</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Enxaguante Bucal" data-preco="40.00" data-img="enxaguante-bucal.jpg" aria-label="Adicionar Enxaguante Bucal ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
 
-          <!-- Produto 9 -->
-          <article class="produto" data-nome="Estojo para aparelho móvel Prata" data-preco="18.70" tabindex="0">
-            <img src="Estojo para aparelho móvel Prata.jpg" alt="Estojo para aparelho móvel Prata" loading="lazy" />
-            <h3>Estojo para aparelho móvel Prata</h3>
-            <p>R$ 18,70</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Estojo para aparelho móvel Prata', 18.70, 'estojo-aparelho.jpg')">Adicionar ao carrinho</button>
+          <!-- PRODUTO 9 -->
+          <article class="produto" data-nome="Estojo para aparelho móvel Prata" data-categoria="acessorios">
+            <div class="product-image">
+              <span class="product-category">Acessórios</span>
+              <img src="Estojo para aparelho móvel Prata.jpg" alt="Estojo para aparelho móvel prata" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-009</span>
+              <h3>Estojo para Aparelho Móvel Prata</h3>
+              <p class="product-description">Acessório para guardar aparelhos móveis.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 18,70</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Estojo para aparelho móvel Prata" data-preco="18.70" data-img="Estojo para aparelho móvel Prata.jpg" aria-label="Adicionar Estojo para aparelho móvel ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
-          <!-- Produto 10-->
-          <article class="produto" data-nome="Ponta Ultrassônica Advance E4 - Microdont" data-preco="112.22" tabindex="0">
-            <img src="Ponta Ultrassônica Advance E4 - Microdont.gif" alt="Ponta Ultrassônica Advance E4 - Microdont" loading="lazy" />
-            <h3>Ponta Ultrassônica Advance E4 - Microdont</h3>
-            <p>R$112,22</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Estojo para aparelho móvel Prata', 18.70, 'estojo-aparelho.jpg')">Adicionar ao carrinho</button>
+
+          <!-- PRODUTO 10 -->
+          <article class="produto" data-nome="Ponta Ultrassônica Advance E4 - Microdont" data-categoria="equipamentos">
+            <div class="product-image">
+              <span class="product-category">Equipamentos</span>
+              <img src="Ponta Ultrassônica Advance E4 - Microdont.gif" alt="Ponta ultrassônica Advance E4 Microdont" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-010</span>
+              <h3>Ponta Ultrassônica Advance E4 - Microdont</h3>
+              <p class="product-description">Acessório odontológico de uso profissional.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 112,22</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Ponta Ultrassônica Advance E4 - Microdont" data-preco="112.22" data-img="Ponta Ultrassônica Advance E4 - Microdont.gif" aria-label="Adicionar Ponta Ultrassônica ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
-          <!-- Produto 11 -->
-          <article class="produto" data-nome="Luva de Procedimento de Látex com Pó - Descarpack" data-preco="28.99" tabindex="0">
-            <img src="embalagem-luva-de-procedimento.jpg" alt="Luva de Procedimento de Látex com Pó - Descarpack" loading="lazy" />
-            <h3>Luva de Procedimento de Látex com Pó - Descarpack</h3>
-            <p>R$ 28,99</p>
-            <button class="btn" type="button" onclick="adicionarAoCarrinho('Luva de Procedimento de Látex com Pó - Descarpack', 28.99, 'embalagem-luva-de-procedimento.jpg')">Adicionar ao carrinho</button>
+
+          <!-- PRODUTO 11 -->
+          <article class="produto" data-nome="Luva de Procedimento de Látex com Pó - Descarpack" data-categoria="materiais">
+            <div class="product-image">
+              <span class="product-category">Materiais</span>
+              <img src="embalagem-luva-de-procedimento.jpg" alt="Luva de procedimento de látex com pó Descarpack" loading="lazy">
+            </div>
+            <div class="product-info">
+              <span class="product-reference">ODP-011</span>
+              <h3>Luva de Procedimento de Látex com Pó - Descarpack</h3>
+              <p class="product-description">Item de proteção para ambientes profissionais.</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  <small>Valor ilustrativo</small>
+                  <strong>R$ 28,99</strong>
+                </div>
+                <button type="button" class="add-cart-button" data-adicionar data-nome="Luva de Procedimento de Látex com Pó - Descarpack" data-preco="28.99" data-img="embalagem-luva-de-procedimento.jpg" aria-label="Adicionar Luva de Procedimento ao carrinho">
+                  + Adicionar
+                </button>
+              </div>
+            </div>
           </article>
 
         </div>
 
-        <div id="paginacao" class="paginacao"></div>
+        <p id="mensagem-produtos" class="products-message" aria-live="polite"></p>
+
+        <div id="paginacao" class="paginacao" aria-label="Paginação dos produtos"></div>
+
+        <p class="catalog-disclaimer">
+          Os nomes, imagens e preços são utilizados exclusivamente
+          para fins de demonstração do projeto.
+        </p>
+
       </div>
     </section>
 
-    <!-- Outras seções -->
-    <section id="sobre" class="section" tabindex="-1">
-      <div class="container">
-        <h2>Sobre Nós</h2>
-        <p>Especializados em produtos odontológicos de alta qualidade, atendemos dentistas, clínicas e consultórios com excelência no atendimento.</p>
+    <!-- SOBRE -->
+    <section class="about-section section-spacing" id="sobre">
+      <div class="container about-grid">
+
+        <div class="about-visual">
+          <div class="about-icon">✚</div>
+          <span>ODONTOPRO</span>
+          <strong>Uma experiência digital para o segmento odontológico.</strong>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag">SOBRE O PROJETO</span>
+
+          <h2>Uma loja virtual pensada para simplificar a experiência.</h2>
+
+          <p>
+            A OdontoPro é um projeto demonstrativo de comércio eletrônico
+            desenvolvido para apresentar uma experiência de navegação
+            e organização de produtos do segmento odontológico.
+          </p>
+
+          <p>
+            O projeto reúne catálogo, pesquisa, filtros por categoria,
+            carrinho interativo, checkout simulado e recursos de
+            acessibilidade em uma interface adaptável.
+          </p>
+
+          <a href="#produtos" class="btn btn-primary">
+            Conhecer o catálogo →
+          </a>
+        </div>
+
       </div>
     </section>
 
-    <section id="blog" class="section" tabindex="-1">
+    <!-- COMO FUNCIONA -->
+    <section class="how-section section-spacing">
       <div class="container">
-        <h2>Blog</h2>
-        <p>Fique por dentro das últimas tendências e dicas da odontologia.</p>
+
+        <div class="section-heading centered">
+          <div>
+            <span class="section-tag">EXPERIÊNCIA DE NAVEGAÇÃO</span>
+            <h2>Simples em cada etapa</h2>
+            <p>
+              Experimente os principais recursos desta loja demonstrativa.
+            </p>
+          </div>
+        </div>
+
+        <div class="steps-grid">
+
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-icon">🔎</div>
+            <h3>Encontre</h3>
+            <p>Pesquise produtos ou utilize os filtros para explorar o catálogo.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-icon">🛒</div>
+            <h3>Adicione</h3>
+            <p>Selecione os itens e organize suas quantidades no carrinho.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-icon">💳</div>
+            <h3>Finalize</h3>
+            <p>Preencha os dados fictícios e escolha uma forma de pagamento simulada.</p>
+          </article>
+
+        </div>
+
       </div>
     </section>
 
-    <section id="faq" class="section" tabindex="-1">
-      <div class="container">
-        <h2>Dúvidas Frequentes</h2>
-        <p>Encontre respostas sobre entregas, trocas, produtos e mais.</p>
+    <!-- FAQ -->
+    <section class="faq-section section-spacing" id="faq">
+      <div class="container faq-container">
+
+        <div class="section-heading centered">
+          <div>
+            <span class="section-tag">DÚVIDAS FREQUENTES</span>
+            <h2>Perguntas e respostas</h2>
+            <p>Entenda como funciona a demonstração da OdontoPro.</p>
+          </div>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>Os produtos estão disponíveis para compra?</summary>
+            <p>
+              Não. Este projeto é exclusivamente demonstrativo.
+              Não há estoque, venda ou comercialização dos produtos.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Os preços apresentados são reais?</summary>
+            <p>
+              Não. Os valores são ilustrativos e servem apenas para
+              demonstrar o funcionamento do catálogo e do carrinho.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como funciona a finalização da compra?</summary>
+            <p>
+              É possível preencher um nome e e-mail fictícios,
+              selecionar uma forma de pagamento demonstrativa e
+              visualizar uma confirmação de compra simulada.
+              Nenhum pedido real é criado.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Existe pagamento online?</summary>
+            <p>
+              Não. Pix, cartão e boleto são apenas opções ilustrativas.
+              Nenhuma transação financeira é realizada.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Posso utilizar o site pelo celular?</summary>
+            <p>
+              Sim. A interface foi planejada para se adaptar a
+              diferentes tamanhos de tela.
+            </p>
+          </details>
+
+        </div>
+
       </div>
     </section>
 
-    <section id="depoimentos" class="section" tabindex="-1">
-      <div class="container">
-        <h2>O que dizem nossos clientes</h2>
-        <blockquote>“Produtos excelentes! Atendimento rápido e eficiente.”</blockquote>
-        <blockquote>“Minha clínica só compra aqui. Qualidade garantida!”</blockquote>
-      </div>
-    </section>
+    <!-- CONTATO -->
+    <section class="contact-section section-spacing" id="contato">
+      <div class="container contact-grid">
 
-    <section id="contato" class="section" tabindex="-1">
-      <div class="container">
-        <h2>Fale Conosco</h2>
-        <form action="https://formsubmit.co/awaldige@gmail.com" method="POST" class="form-contato">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://odonto-pro-lyart.vercel.app/obrigado.html">
+        <div class="contact-content">
+          <span class="section-tag">FALE CONOSCO</span>
+          <h2>Tem alguma dúvida sobre o projeto?</h2>
 
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="name" required />
+          <p>
+            Esta área demonstra como poderia funcionar um canal de contato
+            em uma loja virtual. Nenhuma mensagem será enviada ou armazenada.
+          </p>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <div class="contact-notice">
+            <span>ℹ️</span>
+            <p>
+              Formulário demonstrativo. Não informe dados pessoais,
+              informações financeiras ou dados sensíveis.
+            </p>
+          </div>
+        </div>
 
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="message" required></textarea>
+        <form id="form-contato" class="contact-form">
 
-          <button type="submit" class="btn">Enviar</button>
+          <div class="form-group">
+            <label for="nome">Nome demonstrativo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite um nome fictício"
+              required
+              maxlength="80"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail demonstrativo</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="exemplo@demonstracao.com"
+              required
+              maxlength="120"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="4"
+              placeholder="Digite uma mensagem fictícia..."
+              required
+              maxlength="500"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary contact-submit">
+            Testar formulário
+            <span>→</span>
+          </button>
+
+          <p id="form-status" class="form-status" aria-live="polite"></p>
+
+          <small>
+            Demonstração local: os dados não serão enviados a nenhum servidor.
+          </small>
+
         </form>
+
       </div>
     </section>
 
-    <section id="pagamento" class="section" tabindex="-1">
-      <div class="container">
-        <h2>Formas de Pagamento</h2>
-        <p>Aceitamos cartões Visa, Mastercard, Pix, boleto bancário e transferência. Pagamento seguro garantido!</p>
-      </div>
-    </section>
   </main>
 
-  <footer>
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2025 OdontoPro. Todos os direitos reservados.</p>
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+          <a href="#home" class="logo footer-logo">
+            <span class="logo-icon">✚</span>
+            <span>Odonto<span>Pro</span></span>
+          </a>
+
+          <p>
+            Uma experiência demonstrativa de loja virtual
+            para o segmento odontológico.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Navegação</h3>
+          <a href="#home">Início</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#sobre">Sobre o projeto</a>
+          <a href="#faq">Perguntas frequentes</a>
+        </div>
+
+        <div class="footer-links">
+          <h3>Informações</h3>
+          <a href="#diferenciais">Diferenciais</a>
+          <a href="#contato">Contato demonstrativo</a>
+          <a href="#home">Voltar ao topo ↑</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="ano-atual">2026</span> OdontoPro.
+          Projeto demonstrativo.
+        </p>
+
+        <p>
+          Desenvolvido por
+          <strong>AW TECHNOLOGY</strong>
+        </p>
+      </div>
+
     </div>
   </footer>
 
+  <!-- FUNDO DO CARRINHO -->
+  <div id="carrinho-overlay" class="cart-overlay" hidden></div>
+
+  <!-- CARRINHO LATERAL -->
+  <aside
+    id="area-carrinho"
+    class="cart-panel"
+    aria-label="Carrinho demonstrativo"
+    aria-hidden="true"
+    hidden
+  >
+
+    <div class="cart-header">
+      <div>
+        <span class="section-tag">SUA SELEÇÃO</span>
+        <h2>Meu carrinho</h2>
+      </div>
+
+      <button
+        type="button"
+        id="fechar-carrinho"
+        class="close-cart"
+        aria-label="Fechar carrinho"
+      >
+        ✕
+      </button>
+    </div>
+
+    <div class="cart-demo-notice">
+      Simulação de carrinho. Nenhuma compra será realizada.
+    </div>
+
+    <ul id="lista-itens-carrinho" class="cart-items">
+      <li class="cart-empty">Seu carrinho está vazio.</li>
+    </ul>
+
+    <div class="cart-footer">
+
+      <div class="cart-total">
+        <span>Total ilustrativo</span>
+        <strong id="total-carrinho">R$ 0,00</strong>
+      </div>
+
+      <button
+        type="button"
+        id="limpar-carrinho"
+        class="clear-cart-button"
+        hidden
+      >
+        Limpar carrinho
+      </button>
+
+      <button
+        type="button"
+        id="finalizar-compra"
+        class="checkout-button"
+        hidden
+        disabled
+      >
+        Finalizar compra simulada
+      </button>
+
+      <p class="cart-footer-note">
+        Este recurso não processa pedidos ou pagamentos.
+      </p>
+
+    </div>
+
+  </aside>
+
+  <!-- CHECKOUT DEMONSTRATIVO -->
+  <div
+    id="resumo-modal"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="resumo-titulo"
+    hidden
+  >
+    <div class="summary-modal checkout-modal">
+
+      <button
+        type="button"
+        id="fechar-resumo"
+        class="close-summary"
+        aria-label="Fechar checkout"
+      >
+        ✕
+      </button>
+
+      <span class="summary-icon">🛒</span>
+
+      <h2 id="resumo-titulo">Finalizar compra</h2>
+
+      <p>
+        Preencha os dados demonstrativos e escolha uma forma
+        de pagamento para concluir a simulação.
+      </p>
+
+      <!-- FORMULÁRIO COMPATÍVEL COM SCRIPT.JS -->
+      <form id="form-checkout">
+
+        <div class="form-group">
+          <label for="checkout-nome">Nome completo</label>
+          <input
+            type="text"
+            id="checkout-nome"
+            name="nome"
+            placeholder="Digite um nome fictício"
+            maxlength="80"
+            autocomplete="off"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="checkout-email">E-mail</label>
+          <input
+            type="email"
+            id="checkout-email"
+            name="email"
+            placeholder="exemplo@demonstracao.com"
+            maxlength="120"
+            autocomplete="off"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="metodo-pagamento">Forma de pagamento</label>
+
+          <select
+            id="metodo-pagamento"
+            name="pagamento"
+            required
+          >
+            <option value="">Selecione uma forma de pagamento</option>
+            <option value="pix">Pix (simulado)</option>
+            <option value="cartao">Cartão de crédito (simulado)</option>
+            <option value="boleto">Boleto bancário (simulado)</option>
+          </select>
+        </div>
+
+        <div class="checkout-order">
+          <h3>Resumo dos produtos</h3>
+
+          <ul id="resumo-itens" class="summary-items"></ul>
+
+          <div class="summary-total">
+            <span>Total ilustrativo</span>
+            <strong id="resumo-total">R$ 0,00</strong>
+          </div>
+        </div>
+
+        <p class="checkout-disclaimer">
+          Demonstração: nenhum pagamento será processado.
+          Não utilize dados pessoais ou financeiros reais.
+          As informações não serão enviadas ou armazenadas.
+        </p>
+
+        <button
+          type="submit"
+          id="confirmar-simulacao"
+          class="btn btn-primary summary-button"
+        >
+          Concluir simulação
+        </button>
+
+        <p
+          id="checkout-status"
+          class="checkout-confirmation"
+          role="status"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </div>
+  </div>
+
+  <!-- NOTIFICAÇÕES -->
+  <div
+    id="toast-container"
+    class="toast-container"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
   <script src="script.js"></script>
+
 </body>
 </html>
-
-
-
